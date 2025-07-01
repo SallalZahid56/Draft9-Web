@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Draft9</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Roboto&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light navbar-custom shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- Logo -->
+      <a class="navbar-brand logo-tweak" href="#">
+        <img src="/assets/images/logo.avif" alt="Logo">
+      </a>
+
+
+      <!-- Right Side -->
+      <div class="d-flex align-items-center right-controls">
+        <button class="btn custom-book-btn me-2">Book a Call</button>
+        <button class="navbar-toggler border-0" type="button" aria-label="Toggle navigation"
+          data-bs-target="#navbarMenu" onclick="toggleMenu(this)">
+          <div class="custom-hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </button>
+
+        </button>
+
+      </div>
+
+      <!-- Collapsible Menu (always collapsible) -->
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav text-center mt-3">
+          <li class="nav-item"><a class="nav-link" href="#howItWorks">How it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#membershipBenefits">Benefits</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero-section d-flex flex-column align-items-center justify-content-center text-center py-5">
+    <div class="container">
+      <!-- Heading -->
+      <h1 class="fw-bold display-5 lh-sm">
+        <span class="d-block">IMAGINE HAVING A</span>
+        <span class="d-block">WEBSITE THAT</span>
+        <span class="d-block text-primary">CONVERTS</span>
+      </h1>
+
+      <!-- Paragraph -->
+      <p class="mt-3 fs-5 text-muted">
+        We’ll double your website’s conversion rate or you don’t pay. Simple as that.
+      </p>
+
+      <!-- Button and status -->
+      <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap mt-4">
+        <!-- Animated button -->
+        <a href="#" class="btn clean-hero-btn px-4 py-2">
+          <span class="btn-text-one">View Our Plans</span>
+          <span class="btn-text-two">View Our Plans</span>
+        </a>
+
+        <!-- Open for work -->
+        <div class="d-flex align-items-center">
+          <span class="rounded-circle me-2" style="width: 10px; height: 10px; background-color: #57e389;"></span>
+          <span class="fw-medium text-dark">Open for work</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Images Section INSIDE Hero -->
+    <div class="image-row-wrapper mt-5">
+      <div class="image-row">
+        <div class="image-container"><img src="/assets/images/1.avif" alt="Image 1" /></div>
+        <div class="image-container"><img src="/assets/images/2.avif" alt="Image 2" /></div>
+        <div class="image-container"><img src="/assets/images/3.avif" alt="Image 3" /></div>
+        <div class="image-container"><img src="/assets/images/4.avif" alt="Image 4" /></div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="brands-section py-5">
+    <div class="container text-center mb-4">
+      <p class="brand-intro-text">
+        Across the years, Collaborated with outstanding brands & agencies.
+      </p>
+    </div>
+
+    <div class="brand-carousel-wrapper">
+      <div class="brand-carousel-track">
+        <!-- Repeat your 6 logos twice for seamless infinite loop -->
+        <img src="/assets/images/ebomo.avif" alt="Brand 1" />
+        <img src="/assets/images/klaara fradiga.avif" alt="Brand 2" />
+        <img src="/assets/images/soulfamily.svg" alt="Brand 3" />
+        <img src="/assets/images/ebomo.avif" alt="Brand 4" />
+        <img src="/assets/images/klaara fradiga.avif" alt="Brand 5" />
+        <img src="/assets/images/soulfamily.svg" alt="Brand 6" />
+
+        <!-- Duplicate for seamless looping -->
+        <img src="/assets/images/ebomo.avif" alt="Brand 1" />
+        <img src="/assets/images/klaara fradiga.avif" alt="Brand 2" />
+        <img src="/assets/images/soulfamily.svg" alt="Brand 3" />
+        <img src="/assets/images/ebomo.avif" alt="Brand 4" />
+        <img src="/assets/images/klaara fradiga.avif" alt="Brand 5" />
+        <img src="/assets/images/soulfamily.svg" alt="Brand 6" />
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Pricing Section -->
+  <section class="pricing-section mt-5" id="howItWorks">
+    <div class="container text-center py-5">
+      <!-- Heading -->
+      <h2 class="pricing-heading mb-4">
+        Our creative process is simple and straight-forward.
+      </h2>
+
+      <!-- Process steps -->
+      <div class="process-steps d-flex justify-content-center align-items-center flex-wrap gap-3 mb-5">
+        <span class="step-text">Subscribe</span>
+        <span class="arrow">&#8594;</span>
+        <span class="step-text">Request</span>
+        <span class="arrow">&#8594;</span>
+        <span class="step-text">Delivery</span>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <img src="/assets/images/basic.avif" alt="Subscribe" class="pricing-img" />
+          <div class="card-body p-4">
+            <h5 class="card-title">Subscribe a plan</h5>
+            <p class="card-text">
+              Book a value-packed free call, get to know our process, see our past results, and learn how we can help
+              your business succeed.
+            </p>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <img src="/assets/images/second.avif" alt="Subscribe" class="pricing-img" />
+          <div class="card-body p-4">
+            <h5 class="card-title">Subscribe a plan</h5>
+            <p class="card-text">
+              Book a value-packed free call, get to know our process, see our past results, and learn how we can help
+              your business succeed.
+            </p>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <img src="/assets/images/third.avif" alt="Subscribe" class="pricing-img" />
+          <div class="card-body p-4">
+            <h5 class="card-title">Subscribe a plan</h5>
+            <p class="card-text">
+              Book a value-packed free call, get to know our process, see our past results, and learn how we can help
+              your business succeed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- What We Do Section -->
+  <section class="services-section mt-5" id="services">
+    <div class="container py-5">
+      <!-- Section Heading -->
+      <div class="text-center mb-5">
+        <h2 class="services-heading">
+          What our partners <br />
+          <span class="fw-semibold">hire us to do</span>
+        </h2>
+      </div>
+
+      <!-- Card Layout -->
+      <div class="row g-4 align-items-stretch">
+        <!-- Left Side Large Card -->
+        <div class="col-md-6">
+          <div class="services-card h-100 p-4">
+            <!-- Icons grid -->
+            <div class="icon-grid mb-4">
+              <div class="icon-wrapper"><img src="/assets/images/frameicon.png" class="service-icon" alt="Icon 1" />
+              </div>
+              <div class="icon-wrapper"><img src="/assets/images/ps.png" class="service-icon" alt="Icon 2" /></div>
+              <div class="icon-wrapper"><img src="/assets/images/xdset.png" class="service-icon" alt="Icon 3" /></div>
+              <div class="icon-wrapper"><img src="/assets/images/diamond icon.png" class="service-icon" alt="Icon 4" />
+              </div>
+              <div class="icon-wrapper"><img src="/assets/images/Ai icon.png" class="service-icon" alt="Icon 5" /></div>
+              <div class="icon-wrapper"><img src="/assets/images/canvaicon.png" class="service-icon" alt="Icon 6" />
+              </div>
+            </div>
+
+            <!-- Design Tags -->
+            <h5 class="text-start mb-3">Design & Graphics</h5>
+            <div class="row gx-2 gy-2">
+              <div class="col-4">
+                <div class="tag-pill">
+                  <img src="/assets/images/Notebook Minimalistic.png" class="tag-icon" alt="Icon" />
+                  <span>Website Design</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="tag-pill">
+                  <img src="/assets/images/Slider Vertical.png" class="tag-icon" alt="Icon" />
+                  <span>Landing Page</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="tag-pill">
+                  <img src="/assets/images/Tablet.png" class="tag-icon" alt="Icon" />
+                  <span>WebApp Design</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="tag-pill">
+                  <img src="/assets/images/Smartphone 2.png" class="tag-icon" alt="Icon" />
+                  <span>Mobile App</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="tag-pill">
+                  <img src="/assets/images/Palette Round.png" class="tag-icon" alt="Icon" />
+                  <span>UX/UI Design</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="tag-pill">
+                  <img src="/assets/images/Filters.png" class="tag-icon" alt="Icon" />
+                  <span>Logo Design</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="tag-pill">
+                  <img src="/assets/images/Pallete 2.png" class="tag-icon" alt="Icon" />
+                  <span>Graphics Design</span>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="tag-pill">
+                  <img src="/assets/images/Layers Minimalistic.png" class="tag-icon" alt="Icon" />
+                  <span>Brand Identity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Right Side Two Cards -->
+        <div class="col-md-6 d-flex flex-column gap-4">
+          <!-- Top Right Card -->
+          <div class="services-card flex-grow-1 p-4">
+            <h5 class="mb-3">No-Code Development</h5>
+
+            <!-- Platform Tags -->
+            <div class="platform-grid mb-3">
+              <div class="platform-pill">
+                <img src="/assets/images/webflow.png" alt="Webflow" />
+              </div>
+              <div class="platform-pill">
+                <img src="/assets/images/wordpress.png" alt="WordPress" />
+              </div>
+              <div class="platform-pill">
+                <img src="/assets/images/frame.png" alt="Framer" />
+              </div>
+              <div class="platform-pill">
+                <img src="/assets/images/shopify.png" alt="Shopify" />
+              </div>
+              <div class="platform-pill">
+                <img src="/assets/images/wix.png" alt="Wix" />
+              </div>
+            </div>
+
+            <!-- Brand Icons Row -->
+            <div class="brand-icons-row">
+              <img src="/assets/images/wordpressicon.png" alt="Brand 1" />
+              <img src="/assets/images/wordsimple.png" alt="Brand 2" />
+              <img src="/assets/images/unknown brand.png" alt="Brand 3" />
+              <img src="/assets/images/wixicon.png" alt="Brand 4" />
+              <img src="/assets/images/shopifyicon.png" alt="Brand 5" />
+            </div>
+
+          </div>
+
+          <!-- Bottom Right Card -->
+          <div class="services-card highlight-card flex-grow-1 p-4 d-flex flex-column justify-content-between">
+            <p class="mb-4 highlight-text">
+              Take your business to the next level with on-demand, professional design and development services.
+            </p>
+            <button class="cleann-hero-btn align-self-start">
+              <span class="btn-text-onee">View Our Plans</span>
+              <span class="btn-text-twoo">View Our Plans</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Selected Work Section -->
+  <section class="selected-work-section">
+    <div class="selected-work-header container d-flex justify-content-between align-items-start flex-wrap">
+      <div class="selected-work-left">
+        <h2 class="selected-work-heading">Selected Work</h2>
+        <p class="selected-work-subtext">Whether it's a vibrant website or a minimal mobile app you seek.
+          We deliver exceptional quality for all.</p>
+      </div>
+      <div class="selected-work-right">
+        <button class="work-cta-btn align-self-start">
+          <img src="/assets/images/elements.png" alt="Icon" class="btn-icon" />
+          <span class="btn-text-1">View Our Plans</span>
+          <span class="btn-text-2">View Our Plans</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Moving Image Lines -->
+    <div class="work-image-marquee">
+      <img src="/assets/images/Ellipse 1112.png" class="background-glow" alt="Glow Background" />
+      <div class="image-row-up">
+        <div class="image-marquee-track">
+          <div class="image-block"><img src="/assets/images/1.avif" alt="Work 1"></div>
+          <div class="image-block"><img src="/assets/images/klrada.avif" alt="Work 2"></div>
+          <div class="image-block"><img src="/assets/images/3.avif" alt="Work 3"></div>
+          <div class="image-block"><img src="/assets/images/finnexa.avif" alt="Work 4"></div>
+          <div class="image-block"><img src="/assets/images/bistrap 1.png" alt="Work 5"></div>
+
+
+          <!-- Duplicate set -->
+          <div class="image-block"><img src="/assets/images/1.avif" alt="Work 1 duplicate"></div>
+          <div class="image-block"><img src="/assets/images/klrada.avif" alt="Work 2 duplicate"></div>
+          <div class="image-block"><img src="/assets/images/3.avif" alt="Work 3 duplicate"></div>
+          <div class="image-block"><img src="/assets/images/finnexa.avif" alt="Work 4 duplicate"></div>
+          <div class="image-block"><img src="/assets/images/bistrap 1.png" alt="Work 5 duplicate"></div>
+        </div>
+      </div>
+      <div class="image-row-down">
+        <div class="image-marquee-track reverse">
+          <div class="image-block"><img src="/assets/images/trace.png" alt="Work 6"></div>
+          <div class="image-block"><img src="/assets/images/einstienn.png" alt="Work 7"></div>
+          <div class="image-block"><img src="/assets/images/third.avif" alt="Work 8"></div>
+          <div class="image-block"><img src="/assets/images/finnexa.avif" alt="Work 9"></div>
+          <div class="image-block"><img src="/assets/images/Frame 1000005958.png" alt="Work 10"></div>
+
+
+          <div class="image-block"><img src="/assets/images/trace.png" alt="Work 6"></div>
+          <div class="image-block"><img src="/assets/images/einstienn.png" alt="Work 7"></div>
+          <div class="image-block"><img src="/assets/images/third.avif" alt="Work 8"></div>
+          <div class="image-block"><img src="/assets/images/finnexa.avif" alt="Work 9"></div>
+          <div class="image-block"><img src="/assets/images/Frame 1000005958.png" alt="Work 10"></div>
+        </div>
+      </div>
+
+      <!-- Center Overlay Content -->
+      <div class="center-overlay-content">
+        <img src="/assets/images/Drafts9 Logo.png" alt="Draft9 Logo" class="overlay-logo" />
+        <p class="overlay-description">World's most loved websites and apps are designed by Drafts9</p>
+        <button class="work-cta-btn">
+          <span class="btn-text-1">View Our Plans</span>
+          <span class="btn-text-2">View Our Plans</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <section class="feature-section" id="membershipBenefits">
+    <div class="container text-center mb-5">
+      <h2 class="fw-bold display-5">Membership benefits.</h2>
+      <p class="text-muted fs-5">Get all our design services for a fixed monthly fee. Enjoy all the benefits.</p>
+    </div>
+
+    <div class="container">
+      <!-- FIRST ROW -->
+      <!-- FIRST ROW -->
+      <div class="row g-4 align-items-stretch">
+        <!-- Left Large Card -->
+        <div class="col-12 col-md-6 col-lg-6 d-flex">
+          <div class="feature-card p-4 w-100 d-flex flex-column">
+            <img src="/assets/images/member1.avif" alt="Unlimited" class="img-fluid rounded mb-3"
+              style="height: 65%; object-fit: cover;">
+            <h3 class="h5 fw-bold">Unlimited Requests & Revisions</h3>
+            <p class="text-muted mb-0">
+              Unlike other website design packages, you can get unlimited design requests & iterations for your digital
+              products, graphics, and more. We'll keep making revisions until you're totally happy with the result.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Two Cards -->
+        <div class="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-between gap-4">
+          <div class="feature-card p-4 d-flex flex-column align-items-start text-start h-100">
+            <h3 class="h5 fw-bold">Worry Free Pricing</h3>
+            <p class="text-muted">
+              With Drafts9, our hassle-free monthly subscription to our services helps you manage your design expenses,
+              free from any concerns about extra charges.
+            </p>
+            <img src="/assets/images/member2.avif" alt="Worry Free" class="img-fluid mt-auto"
+              style="max-height: 160px; object-fit: contain;">
+          </div>
+
+          <div class="feature-card p-4 d-flex flex-column align-items-start text-start h-100">
+            <h3 class="h5 fw-bold">Quick Turnaround</h3>
+            <p class="text-muted">
+              Receive the design you need quickly, with an average turnaround time of 48 hours or even same-day
+              turnarounds.
+            </p>
+            <img src="/assets/images/member3.avif" alt="Quick Turnaround" class="img-fluid mt-auto"
+              style="max-height: 160px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+
+      <!-- SECOND ROW -->
+      <div class="row g-4 mt-2">
+        <div class="col-12 col-md-6 col-lg-6 d-flex">
+          <div class="feature-card p-4 w-100 d-flex flex-column align-items-start text-start">
+            <h3 class="h5 fw-bold">Unlimited Requests & Revisions</h3>
+            <p class="text-muted">
+              Unlike other website design packages, you can get unlimited design requests & iterations for your digital
+              products, graphics, and more. We'll keep making revisions until you're totally happy with the result.
+            </p>
+            <img src="/assets/images/member4.avif" alt="Design Team" class="img-fluid mt-auto bottom-large-img"
+              style="max-height: 220px; object-fit: contain;">
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-6 d-flex">
+          <div class="feature-card p-4 w-100 d-flex flex-column align-items-start text-start">
+            <h3 class="h5 fw-bold">Access to a Top-Notch Team of Designers</h3>
+            <p class="text-muted">
+              As part of our comprehensive design subscription service, access our top-notch design team: graphic
+              designers, logo designers, product designers, UI/UX designers, and more. No freelancers - only unique
+              designs, no templates.
+            </p>
+            <img src="/assets/images/mens.avif" alt="Project Management" class="img-fluid mt-auto bottom-large-img"
+              style="max-height: 220px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End of container -->
+  </section>
+
+
+
+
+
+
+  <!-- Pricing Section -->
+  <!-- Pricing Section -->
+  <section class="pricing-sectionn py-5" id="pricing">
+    <div class="container text-center text-white mb-5">
+      <h2 class="display-5 fw-bold mb-3">
+        One simple fee,<br />
+        no surprises.
+      </h2>
+      <p class="fs-5 text-white-50">
+        We offer simple pricing. No surprises or hidden costs,<br />
+        just ongoing design support when you need it.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="row g-4 justify-content-center mb-4">
+        <!-- Standard Card -->
+        <div class="col-md-6 col-lg-5 d-flex">
+          <div class="custom-pricing-card-left w-100 d-flex flex-column h-100">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h4 class="fw-bold mb-0">Standard</h4>
+              <span class="badge badge-popular text-dark">Popular</span>
+            </div>
+            <p class="text-muted mb-3">Perfect for startups in need of ongoing design support.</p>
+
+            <h2 class="fw-bold mb-0">$1K<small class="fs-6 text-muted">/mo</small></h2>
+            <p class="text-muted small mb-4">Pause or cancel anytime</p>
+
+            <div class="custom-feature-card-left p-3 mb-4">
+              <p class="mb-2"><span class="features-icons"></span>One request at a time</p>
+              <p class="mb-2"><span class="features-icons"></span>1 designer dedicated to your project</p>
+              <p class="mb-2"><span class="features-icons"></span>Access to all our design services</p>
+              <p class="mb-2"><span class="features-icons"></span>Unlimited tasks</p>
+              <p class="mb-2"><span class="features-icons"></span>Unlimited revisions</p>
+              <p class="mb-2"><span class="features-icons"></span>Unlimited users</p>
+              <p class="mb-2"><span class="features-icons"></span>Average 48 hour delivery</p>
+            </div>
+
+            <button class="pricing-btn w-100 position-relative mt-auto">
+              <span class="pricing-btn-text-1">Get Started</span>
+              <span class="pricing-btn-text-2">Get Started</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pro Card -->
+        <div class="col-md-6 col-lg-5 d-flex">
+          <div class="custom-pricing-card-right w-100 d-flex flex-column h-100">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h4 class="fw-bold mb-0">Pro</h4>
+              <span class="badge badge-faster">2x faster</span>
+            </div>
+            <p class="text-muted mb-3">Perfect for businesses needing both high quality design & seamless development.
+            </p>
+
+            <h2 class="fw-bold mb-0">$1.9K<small class="fs-6 text-muted">/mo</small></h2>
+            <p class="text-muted small mb-4">Pause or cancel anytime</p>
+
+            <div class="custom-feature-card-right p-3 mb-4">
+              <p class="mb-2"><span class="features-icons"></span>Two requests at a time</p>
+              <p class="mb-2"><span class="features-icons"></span>2 designer dedicated to your project</p>
+              <p class="mb-2"><span class="features-icons"></span>WordPress/Webflow no-code included</p>
+              <p class="mb-2"><span class="features-icons"></span>Access to all our design services</p>
+              <p class="mb-2"><span class="features-icons"></span>Unlimited tasks</p>
+              <p class="mb-2"><span class="features-icons"></span>Unlimited revisions</p>
+              <p class="mb-2"><span class="features-icons"></span>Unlimited users</p>
+              <p class="mb-2"><span class="features-icons"></span>Average 24 - 48 hour delivery</p>
+            </div>
+
+            <button class="pricing-btn pricing-btn-pro w-100 position-relative mt-auto">
+              <span class="pricing-btn-text-1">Get Started</span>
+              <span class="pricing-btn-text-2">Get Started</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <!-- CTA (Fixed Width) -->
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-10">
+          <div class="card horizontal-cta-card p-4 mt-3">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-8">
+                <h5 class="fw-bold mb-2">Try our standard plan for 7 days, $499 design only</h5>
+                <p class="mb-0 text-white-50">
+                  If your project doesn't fit the plans mentioned above or if you'd like to<br />
+                  discuss before deciding, book a call with us.
+                </p>
+              </div>
+              <div class="col-12 col-md-4 text-md-end text-center mt-3 mt-md-0">
+                <button class="cta-animated-btn position-relative">
+                  <span class="cta-btn-text-1">Get Started</span>
+                  <span class="cta-btn-text-2">Get Started</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Testimonials Section -->
+  <section class="testimonial-section py-5" id="reviews">
+    <div class="container">
+      <!-- Header Row -->
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <h2 class="fw-bold mb-0 heading-stacked">
+          <span>Our partners</span>
+          <span>experiences with us</span>
+        </h2>
+        <div class="slider-arrows d-flex gap-2">
+          <button class="arrow-btn prev">
+            <img src="/assets/images/t arrow l.png" alt="Previous">
+          </button>
+          <button class="arrow-btn next">
+            <img src="/assets/images/t arrow r.png" alt="Next">
+          </button>
+        </div>
+      </div>
+      <!-- Swiper Slider -->
+      <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card p-3">
+              <div class="video-box mb-3">
+                <div class="custom-video-wrapper">
+                  <video src="/assets/videos/t1.mp4" class="custom-video" preload="metadata"></video>
+                  <button class="play-pause-btn">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+
+              </div>
+              <p class="testimonial-text">
+                Working with the team was seamless and efficient. Our designs were taken to a new level!
+              </p>
+              <hr />
+              <div class="d-flex align-items-center mt-3">
+                <img src="/assets/images/9.png" class="rounded-circle me-3" width="50" height="50" alt="Lee">
+                <div>
+                  <h6 class="mb-0">Lee</h6>
+                  <small class="text-muted">CEO at The Competitor Coach</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card p-3">
+              <div class="video-box mb-3">
+                <div class="custom-video-wrapper">
+                  <video src="/assets/videos/t1.mp4" class="custom-video" preload="metadata"></video>
+                  <button class="play-pause-btn">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+
+              </div>
+              <p class="testimonial-text">
+                Incredible support and fast turnaround — highly recommend their design services!
+              </p>
+              <hr />
+              <div class="d-flex align-items-center mt-3">
+                <img src="/assets/images/9.png" class="rounded-circle me-3" width="50" height="50" alt="Sophie">
+                <div>
+                  <h6 class="mb-0">Sophie</h6>
+                  <small class="text-muted">CMO at Brandify</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card p-3">
+              <div class="video-box mb-3">
+                <div class="custom-video-wrapper">
+                  <video src="/assets/videos/t1.mp4" class="custom-video" preload="metadata"></video>
+                  <button class="play-pause-btn">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+
+              </div>
+              <p class="testimonial-text">
+                Their communication was clear and fast. Results exceeded expectations!
+              </p>
+              <hr />
+              <div class="d-flex align-items-center mt-3">
+                <img src="/assets/images/9.png" class="rounded-circle me-3" width="50" height="50" alt="Alex">
+                <div>
+                  <h6 class="mb-0">Alex</h6>
+                  <small class="text-muted">Founder at PixelPush</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card p-3">
+              <div class="video-box mb-3">
+                <div class="custom-video-wrapper">
+                  <video src="/assets/videos/t1.mp4" class="custom-video" preload="metadata"></video>
+                  <button class="play-pause-btn">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+
+              </div>
+              <p class="testimonial-text">
+                Our campaign’s performance improved drastically after their intervention.
+              </p>
+              <hr />
+              <div class="d-flex align-items-center mt-3">
+                <img src="/assets/images/9.png" class="rounded-circle me-3" width="50" height="50" alt="Nina">
+                <div>
+                  <h6 class="mb-0">Nina</h6>
+                  <small class="text-muted">Marketing Head at Adwave</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card p-3">
+              <div class="video-box mb-3">
+                <div class="custom-video-wrapper">
+                  <video src="/assets/videos/t1.mp4" class="custom-video" preload="metadata"></video>
+                  <button class="play-pause-btn">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+
+              </div>
+              <p class="testimonial-text">
+                I’ve never seen a team more dedicated and creative. Amazing collaboration!
+              </p>
+              <hr />
+              <div class="d-flex align-items-center mt-3">
+                <img src="/assets/images/9.png" class="rounded-circle me-3" width="50" height="50" alt="Jordan">
+                <div>
+                  <h6 class="mb-0">Jordan</h6>
+                  <small class="text-muted">Creative Director at BrightLoop</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<section class="faq-section py-5" id="faq">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">Things, you <br />probably wonder.</h2>
+      <p class="text-muted">We are here to explain everything you might want to know. Let us help!</p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="faq-accordion">
+      <!-- FAQ Item -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How does the subscription work?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Once you subscribe, you can request design or development projects at any time. We will work on one task at a time, ensuring high-quality delivery. As soon as one task is completed, you can queue the next one.
+        </div>
+      </div>
+
+      <!-- Repeat FAQ Items -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How fast can I expect my tasks to be completed?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+         For the Standard Package, tasks are completed within 48 hours. For the Pro Package, tasks are completed within 24 hours. 
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can I cancel or upgrade my subscription? </span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          es, you can cancel or upgrade your subscription at any time
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you offer refunds?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Due to the nature of our services, we do not offer refunds. However, we’ll work closely with you to ensure that the final task outcome meets your expectations
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How do I make a payment?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Payments are securely processed through Stripe, ensuring your financial information is encrypted and protected at all times
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="project-footer text-white">
+  <!-- Top Section with Image -->
+  <div class="footer-hero text-center">
+    <h2 class="footer-heading mb-3">
+      Start your new project with <br /> us in just a few clicks
+    </h2>
+    <p class="footer-subtext mb-4">
+      For scheduling meetings or WhatsApp inquiries, contact us anytime. <br />
+      We typically respond within 1-2 hours during business hours and within 8-10 hours outside these hours.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <button class="footer-cta-btn position-relative">
+        <span class="footer-btn-text-1">Get Started</span>
+        <span class="footer-btn-text-2">Get Started</span>
+      </button>
+
+      <button class="footer-cta-btn position-relative d-flex align-items-center gap-2">
+        <span class="footer-btn-text-1">Message Us</span>
+        <span class="footer-btn-text-2">Message Us</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Bottom Section with Gradient -->
+  <div class="footer-bottom container py-4">
+    <div class="row align-items-center">
+      <div class="col-md-6 d-flex flex-wrap gap-3 justify-content-center justify-content-md-start text-white-50">
+        <a href="#howItWorks" class="footer-link">How it works</a>
+        <a href="#membershipBenefits" class="footer-link">Benefits</a>
+        <a href="#services" class="footer-link">Services</a>
+        <a href="#pricing" class="footer-link">Pricing</a>
+        <a href="#reviews" class="footer-link">Reviews</a>
+        <a href="#faq" class="footer-link">FAQs</a>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center justify-content-md-end gap-3">
+        <a href="#"><img src="/assets/images/whatsapp.png" alt="WhatsApp" width="22" /></a>
+        <a href="#"><img src="/assets/images/instagram.png" alt="Instagram" width="22" /></a>
+        <a href="#"><img src="/assets/images/mail-01.png" alt="Email" width="22" /></a>
+        <a href="#"><img src="/assets/images/elements (3).png" alt="LinkedIn" width="22" /></a>
+      </div>
+    </div>
+
+    <hr class="footer-divider my-4" />
+
+    <div class="text-center text-white-50 small">
+      © Draft9 2024. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
