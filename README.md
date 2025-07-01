@@ -31,3 +31,25 @@ draft9-website/
 │
 ├── index.html # Main landing page
 └── README.md # Project overview and instructions
+
+
+
+---
+
+## 🚀 How to Run
+
+1. Clone or download the repository.
+2. Open `index.html` in any modern browser.
+3. Ensure image paths are correct (`/assets/images/...`) for background and icons to appear.
+
+---
+
+## 💻 Technologies Used
+
+- HTML5
+- CSS3
+- Bootstrap 5.3.3
+- JavaScript (optional)
+- Responsive design best practices
+
+---
