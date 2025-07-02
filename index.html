@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Draft9</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Roboto&display=swap"
     rel="stylesheet">
@@ -21,16 +23,32 @@
   <nav class="navbar navbar-light navbar-custom shadow-sm">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <!-- Logo -->
-      <a class="navbar-brand logo-tweak" href="#">
-        <img src="/assets/images/logo.avif" alt="Logo">
-      </a>
+      <!-- Left: Logo + Links -->
+      <div class="d-flex align-items-center left-links">
+        <a class="navbar-brand logo-tweak" href="#">
+          <img src="/assets/images/logo.avif" alt="Logo">
+        </a>
 
+        <div class="separator mx-3 d-none d-lg-block"></div>
 
-      <!-- Right Side -->
-      <div class="d-flex align-items-center right-controls">
-        <button class="btn custom-book-btn me-2">Book a Call</button>
-        <button class="navbar-toggler border-0" type="button" aria-label="Toggle navigation"
+        <ul class="navbar-nav flex-row d-none d-lg-flex ms-4">
+          <li class="nav-item mx-2"><a class="nav-link" href="#howItWorks">How it Works</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#membershipBenefits">Benefits</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Button + Hamburger -->
+      <div class="d-flex align-items-center right-controls ms-auto">
+        <a href="#" class="btn custom-book-btn me-2">
+          <span class="btn-text-one">Book a Call</span>
+          <span class="btn-text-two">Book a Call</span>
+        </a>
+
+        <button class="navbar-toggler border-0 d-lg-none" type="button" aria-label="Toggle navigation"
           data-bs-target="#navbarMenu" onclick="toggleMenu(this)">
           <div class="custom-hamburger">
             <div></div>
@@ -38,13 +56,10 @@
             <div></div>
           </div>
         </button>
-
-        </button>
-
       </div>
 
-      <!-- Collapsible Menu (always collapsible) -->
-      <div class="collapse navbar-collapse" id="navbarMenu">
+      <!-- Mobile Menu -->
+      <div class="collapse navbar-collapse d-lg-none" id="navbarMenu">
         <ul class="navbar-nav text-center mt-3">
           <li class="nav-item"><a class="nav-link" href="#howItWorks">How it Works</a></li>
           <li class="nav-item"><a class="nav-link" href="#membershipBenefits">Benefits</a></li>
@@ -54,7 +69,10 @@
           <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
         </ul>
       </div>
+    </div>
   </nav>
+
+
 
 
   <!-- Hero Section -->
@@ -753,126 +771,130 @@
 
 
 
-<section class="faq-section py-5" id="faq">
-  <div class="container">
-    <!-- Heading -->
-    <div class="text-center mb-4">
-      <h2 class="fw-bold">Things, you <br />probably wonder.</h2>
-      <p class="text-muted">We are here to explain everything you might want to know. Let us help!</p>
+  <section class="faq-section py-5" id="faq">
+    <div class="container">
+      <!-- Heading -->
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Things, you <br />probably wonder.</h2>
+        <p class="text-muted">We are here to explain everything you might want to know. Let us help!</p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="faq-accordion">
+        <!-- FAQ Item -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the subscription work?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Once you subscribe, you can request design or development projects at any time. We will work on one task at
+            a time, ensuring high-quality delivery. As soon as one task is completed, you can queue the next one.
+          </div>
+        </div>
+
+        <!-- Repeat FAQ Items -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How fast can I expect my tasks to be completed?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            For the Standard Package, tasks are completed within 48 hours. For the Pro Package, tasks are completed
+            within 24 hours.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I cancel or upgrade my subscription? </span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            es, you can cancel or upgrade your subscription at any time
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you offer refunds?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Due to the nature of our services, we do not offer refunds. However, we’ll work closely with you to ensure
+            that the final task outcome meets your expectations
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I make a payment?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Payments are securely processed through Stripe, ensuring your financial information is encrypted and
+            protected at all times
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <!-- FAQ Accordion -->
-    <div class="faq-accordion">
-      <!-- FAQ Item -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>How does the subscription work?</span>
-          <span class="faq-icon">+</span>
+
+
+
+  <footer class="project-footer text-white">
+    <!-- Top Section with Image -->
+    <div class="footer-hero text-center">
+      <h2 class="footer-heading mb-3">
+        Start your new project with <br /> us in just a few clicks
+      </h2>
+      <p class="footer-subtext mb-4">
+        For scheduling meetings or WhatsApp inquiries, contact us anytime. <br />
+        We typically respond within 1-2 hours during business hours and within 8-10 hours outside these hours.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <button class="footer-cta-btn position-relative">
+          <span class="footer-btn-text-1">Get Started</span>
+          <span class="footer-btn-text-2">Get Started</span>
         </button>
-        <div class="faq-answer">
-          Once you subscribe, you can request design or development projects at any time. We will work on one task at a time, ensuring high-quality delivery. As soon as one task is completed, you can queue the next one.
-        </div>
-      </div>
 
-      <!-- Repeat FAQ Items -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>How fast can I expect my tasks to be completed?</span>
-          <span class="faq-icon">+</span>
+        <button class="footer-cta-btn position-relative d-flex align-items-center gap-2">
+          <span class="footer-btn-text-1">Message Us</span>
+          <span class="footer-btn-text-2">Message Us</span>
         </button>
-        <div class="faq-answer">
-         For the Standard Package, tasks are completed within 48 hours. For the Pro Package, tasks are completed within 24 hours. 
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>Can I cancel or upgrade my subscription? </span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          es, you can cancel or upgrade your subscription at any time
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>Do you offer refunds?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          Due to the nature of our services, we do not offer refunds. However, we’ll work closely with you to ensure that the final task outcome meets your expectations
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>How do I make a payment?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          Payments are securely processed through Stripe, ensuring your financial information is encrypted and protected at all times
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<footer class="project-footer text-white">
-  <!-- Top Section with Image -->
-  <div class="footer-hero text-center">
-    <h2 class="footer-heading mb-3">
-      Start your new project with <br /> us in just a few clicks
-    </h2>
-    <p class="footer-subtext mb-4">
-      For scheduling meetings or WhatsApp inquiries, contact us anytime. <br />
-      We typically respond within 1-2 hours during business hours and within 8-10 hours outside these hours.
-    </p>
-
-    <!-- CTA Buttons -->
-    <div class="d-flex justify-content-center gap-3 flex-wrap">
-      <button class="footer-cta-btn position-relative">
-        <span class="footer-btn-text-1">Get Started</span>
-        <span class="footer-btn-text-2">Get Started</span>
-      </button>
-
-      <button class="footer-cta-btn position-relative d-flex align-items-center gap-2">
-        <span class="footer-btn-text-1">Message Us</span>
-        <span class="footer-btn-text-2">Message Us</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- Bottom Section with Gradient -->
-  <div class="footer-bottom container py-4">
-    <div class="row align-items-center">
-      <div class="col-md-6 d-flex flex-wrap gap-3 justify-content-center justify-content-md-start text-white-50">
-        <a href="#howItWorks" class="footer-link">How it works</a>
-        <a href="#membershipBenefits" class="footer-link">Benefits</a>
-        <a href="#services" class="footer-link">Services</a>
-        <a href="#pricing" class="footer-link">Pricing</a>
-        <a href="#reviews" class="footer-link">Reviews</a>
-        <a href="#faq" class="footer-link">FAQs</a>
-      </div>
-      <div class="col-md-6 d-flex justify-content-center justify-content-md-end gap-3">
-        <a href="#"><img src="/assets/images/whatsapp.png" alt="WhatsApp" width="22" /></a>
-        <a href="#"><img src="/assets/images/instagram.png" alt="Instagram" width="22" /></a>
-        <a href="#"><img src="/assets/images/mail-01.png" alt="Email" width="22" /></a>
-        <a href="#"><img src="/assets/images/elements (3).png" alt="LinkedIn" width="22" /></a>
       </div>
     </div>
 
-    <hr class="footer-divider my-4" />
+    <!-- Bottom Section with Gradient -->
+    <div class="footer-bottom container py-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 d-flex flex-wrap gap-3 justify-content-center justify-content-md-start text-white-50">
+          <a href="#howItWorks" class="footer-link">How it works</a>
+          <a href="#membershipBenefits" class="footer-link">Benefits</a>
+          <a href="#services" class="footer-link">Services</a>
+          <a href="#pricing" class="footer-link">Pricing</a>
+          <a href="#reviews" class="footer-link">Reviews</a>
+          <a href="#faq" class="footer-link">FAQs</a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center justify-content-md-end gap-3">
+          <a href="#"><img src="/assets/images/whatsapp.png" alt="WhatsApp" width="22" /></a>
+          <a href="#"><img src="/assets/images/instagram.png" alt="Instagram" width="22" /></a>
+          <a href="#"><img src="/assets/images/mail-01.png" alt="Email" width="22" /></a>
+          <a href="#"><img src="/assets/images/elements (3).png" alt="LinkedIn" width="22" /></a>
+        </div>
+      </div>
 
-    <div class="text-center text-white-50 small">
-      © Draft9 2024. All rights reserved.
+      <hr class="footer-divider my-4" />
+
+      <div class="text-center text-white-50 small">
+        © Draft9 2024. All rights reserved.
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
 
