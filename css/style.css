@@ -3,50 +3,99 @@ body {
   scroll-behavior: smooth;
 }
 
-.logo-tweak {
-  margin-left: -1.7rem;
-  /* Pull logo closer to the left edge */
-  padding-left: 0;
-  /* Remove any inner spacing */
-}
-
-.logo-tweak img {
-  height: 32px;
-  /* Ensure smaller logo height */
-  object-fit: contain;
-}
-
 .navbar-custom {
   padding: 1rem 2rem;
   background-color: rgb(232, 242, 255);
 }
 
-/* Move right controls more to center-ish */
-.right-controls {
-  margin-right: 14rem;
-  /* Push it left */
+.logo-tweak {
+  margin-left: -0.2rem;
+  padding-left: 0;
 }
 
+.logo-tweak img {
+  height: 32px;
+  object-fit: contain;
+}
+
+.left-links {
+  gap: 0.2rem;
+}
+
+/* Vertical separator between logo and nav links */
+.separator {
+  width: 2px;
+  height: 40px;
+  background-color: #e7d6e6;
+  opacity: 0.3;
+}
+
+/* Book a Call Button with animated text */
 .custom-book-btn {
+  width: 120px;
+  height: 43px;
   background-color: #2279d6;
-  /* You can change this if needed */
-  color: rgb(255, 255, 255);
-  font-family: "Helvetica Now Display Medium", sans-serif;
-  letter-spacing: 0px;
-  line-height: 20px;
-  text-align: center;
+  color: #fff;
+  border-radius: 8px;
   border: none;
-  padding: 8px 9px;
-  border-radius: 10px;
-  font-weight: 550;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  font-family: "Helvetica Now Display Medium", sans-serif;
+  font-size: 0.6rem;
+  line-height: 1;
+  transition: background-color 0.3s ease;
+}
+
+/* Text spans */
+.custom-book-btn span {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
   font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: top 0.4s ease;
+}
+
+/* Initial visible text */
+.custom-book-btn .btn-text-one {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Hidden second text */
+.custom-book-btn .btn-text-two {
+  top: 150%;
+  transform: translateY(-50%);
+}
+
+/* On hover, animate text */
+.custom-book-btn:hover .btn-text-one {
+  top: -100%;
+}
+
+.custom-book-btn:hover .btn-text-two {
+  top: 50%;
+  color: #fff;
 }
 
 .custom-book-btn:hover {
-  background-color: #007bff;
-  /* Keep it the same as default */
-  color: rgb(255, 255, 255);
-  /* Keep text color same too */
+  background-color: #1a66c2;
+}
+
+
+/* Hide Bootstrap toggler icon */
+.navbar-toggler-icon {
+  display: none !important;
 }
 
 .navbar-toggler {
@@ -54,17 +103,7 @@ body {
   box-shadow: none !important;
 }
 
-/* Hide Bootstrap default styling */
-.navbar-toggler-icon {
-  display: none !important;
-}
-
-.navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Custom Hamburger */
+/* Custom hamburger icon */
 .custom-hamburger {
   display: flex;
   flex-direction: column;
@@ -76,77 +115,62 @@ body {
 
 .custom-hamburger div {
   height: 3px;
-  background-color: #000000;
-  border-radius: 2px;
-}
-
-/* Cross animation */
-.navbar-toggler.active .custom-hamburger div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.navbar-toggler.active .custom-hamburger div:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar-toggler.active .custom-hamburger div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Add transition for smoothness */
-.custom-hamburger div {
-  height: 3px;
-  background-color: #000000;
+  background-color: #000;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
+/* Hamburger to cross animation */
+.navbar-toggler.active .custom-hamburger div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.navbar-toggler.active .custom-hamburger div:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggler.active .custom-hamburger div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Nav links styling */
 .navbar-nav .nav-link {
-  font-family: var(--framer-blockquote-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));
-  font-weight: var(--framer-blockquote-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 700)));
-  color: var(--framer-blockquote-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));
-  font-size: calc(var(--framer-blockquote-font-size, var(--framer-font-size, 20px)) * var(--framer-font-size-scale, 1));
-  text-transform: var(--framer-blockquote-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));
-  text-decoration: var(--framer-blockquote-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)));
-  cursor: var(--framer-custom-cursors, pointer);
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  color: #000;
+  font-size: 1rem;
+  text-decoration: none;
   transition: color 0.3s ease;
-  text-align: left !important;
-  margin-left: -1.7rem;
+  margin-left: 0 !important;
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--framer-link-hover-text-color, #0088ff);
+  color: #0088ff;
 }
 
 .navbar-nav .nav-link.active {
-  color: var(--framer-link-current-text-color, #111111);
+  color: #111;
 }
 
-/* Align collapsed navbar items to the left */
+/* Desktop layout: nav links inline */
+.navbar-nav.flex-row .nav-item {
+  margin-right: 1rem;
+}
+
+.navbar-nav.flex-row .nav-link {
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+/* Mobile menu alignment */
 #navbarMenu {
   text-align: left !important;
 }
 
-/* MOBILE RESPONSIVENESS */
+.navbar-collapse {
+  background-color: rgb(232, 242, 255);
+  padding: 1rem;
+}
+
 @media (max-width: 991.98px) {
-  .navbar-custom {
-    padding: 0.75rem 1rem;
-  }
-
-  .logo-tweak {
-    margin-left: 0;
-  }
-
-  .right-controls {
-    margin-right: 0;
-  }
-
-  .navbar-collapse {
-    background-color: rgb(232, 242, 255);
-    /* Same as navbar */
-    padding: 1rem;
-  }
-
   .navbar-nav {
     align-items: flex-start !important;
     width: 100%;
@@ -156,22 +180,14 @@ body {
     width: 100%;
     text-align: left !important;
     padding-left: 0.75rem;
-    margin-left: 0;
+    margin-left: 0 !important;
     font-size: 1rem;
   }
 
-  .custom-book-btn {
-    padding: 7px 12px;
-    font-size: 0.85rem;
-  }
-
-  .custom-hamburger {
-    width: 22px;
-    height: 16px;
+  #navbarMenu {
+    text-align: left !important;
   }
 }
-
-
 
 
 
@@ -184,14 +200,14 @@ body {
 
 /* Heading styles with exact Framer settings */
 .hero-section h1 {
-  font-family: "Recoleta Alt Medium", "Recoleta Alt Medium Placeholder", sans-serif;
-  font-size: 36px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 46px;
   letter-spacing: 0px;
   line-height: 100%;
   text-align: center;
   color: rgb(4, 1, 16);
   /* deep black */
-  font-weight: 400;
+  font-weight: 500;
   /* medium style */
   margin-bottom: 1rem;
 }
@@ -199,7 +215,7 @@ body {
 /* Highlighted "CONVERTS" word */
 .hero-section h1 .text-primary {
   color: rgb(12, 138, 229);
-  font-family: "Recoleta Alt SemiBold", "Recoleta Alt SemiBold Placeholder", sans-serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* Paragraph styling */
@@ -353,6 +369,8 @@ body {
   }
 }
 
+
+
 /* Brands Section */
 .brands-section {
   background: #fff;
@@ -387,6 +405,7 @@ body {
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
+  filter: grayscale(100%);
 }
 
 /* Animation */
@@ -413,17 +432,20 @@ body {
 /* Section background & corners */
 .pricing-section {
   background: linear-gradient(180deg, #F4F4F4, #FFFFFF 69%, #FFFFFF 84.15069068455523%, #fff);
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
+  border-top-left-radius: 8rem;
+  border-top-right-radius: 8rem;
 }
 
-/* Heading styling */
 .pricing-heading {
-  font-family: "Helvetica Now Display Medium", "Helvetica Now Display Medium Placeholder", sans-serif;
-  color: rgb(54, 52, 64);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  font-size: 2.5rem; /* make it more prominent */
+  max-width: 480px; /* triggers a line break */
+  margin: 0 auto;
+  line-height: 1.4;
 }
+
 
 /* Steps styling */
 .process-steps .step-text {
@@ -523,8 +545,10 @@ body {
 }
 
 .services-heading {
-  font-family: "Helvetica Now Display Medium", "Helvetica Now Display Medium Placeholder", sans-serif;
-  color: rgb(54, 52, 64);
+  font-family: 'Cormorant Garamond', serif;
+  color: rgb(0, 0, 0);
+  font-size: 3.5rem;
+  font-weight: 800;
 }
 
 .services-card {
@@ -588,24 +612,23 @@ body {
   align-items: center;
   gap: 6px;
   background-color: #E7F3FC;
-  border-radius: 70px;
-  padding: 6px 9px;
+  border-radius: 65px;
+  padding: 6px 12px;
   font-size: 1rem;
   font-family: "Helvetica Now Display Regular", sans-serif;
-  color: #363440;
+  color: #000000;
   white-space: nowrap;
 }
 
 .tag-pill span {
-  font-family: Helvetica Now Display;
-  font-weight: 500;
-  font-size: 18px;
+  font-family: "Helvetica Now Display Regular", sans-serif;
+  font-weight: 525;
+  font-size: 14px;
   leading-trim: Cap height;
   line-height: 100%;
   letter-spacing: 0px;
   vertical-align: middle;
   text-transform: capitalize;
-
 }
 
 .platform-grid {
@@ -850,8 +873,10 @@ body {
 }
 
 .selected-work-heading {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+  color: rgb(0, 0, 0);
+  font-size: 3.5rem;
+  font-weight: bolder;
   margin-left: 0;
   /* Push to very left */
   text-align: left;
@@ -877,7 +902,7 @@ body {
   height: 45px;
   background-color: #000000;
   color: #ffffff;
-  border-radius: 8px;
+  border-radius: 12px;
   border: none;
   cursor: pointer;
   position: relative;
@@ -1423,6 +1448,10 @@ body {
 .heading-stacked span {
   display: block;
   line-height: 1.2;
+  font-family: 'Cormorant Garamond', serif;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: 3.5;
 }
 
 
